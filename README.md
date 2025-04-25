@@ -67,6 +67,11 @@ import GeneralScroll from "general-scroll";
 # 构造函数
 new GeneralScroll(container, options)
 
+| 左对齐 | 居中对齐 | 右对齐 |
+|:-------|:--------:|-------:|
+| 文本A  |   文本B  |   100  |
+| 文本C  |   文本D  |   200  |
+
 | 方法             | 参数        | 类型               | 必填 | 说明                          |
 |------------------|-------------|--------------------|------|------------------------------|
 | `new GeneralScroll`| container  | Element \| string  | 是   | 接收 DOM 元素或 CSS 选择器字符串 |
