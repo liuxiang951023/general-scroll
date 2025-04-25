@@ -63,39 +63,37 @@ import GeneralScroll from "general-scroll";
 
 ## API 📖
 
-| 左对齐 | 居中对齐 | 右对齐 |
-| :----- | :------: | -----: |
-| 文本 A |  文本 B  |    100 |
-| 文本 C |  文本 D  |    200 |
-
 ```bash
 # 构造函数
 new GeneralScroll(container, options)
+```
 
-| 方法             | 参数        | 类型               | 必填 | 说明                          |
-|------------------|-------------|--------------------|------|------------------------------|
-| `new GeneralScroll`| container  | Element \| string  | 是   | 接收 DOM 元素或 CSS 选择器字符串 |
-|                  | options     | Object             | 否   | 配置选项对象（见下方配置表）   |
+| 方法                | 参数      | 类型              | 必填 | 说明                             |
+| ------------------- | --------- | ----------------- | ---- | -------------------------------- |
+| `new GeneralScroll` | container | Element \| string | 是   | 接收 DOM 元素或 CSS 选择器字符串 |
+|                     | options   | Object            | 否   | 配置选项对象（见下方配置表）     |
 
 # 配置选项
-| 属性      | 类型     | 默认值     | 说明                                   |
-|-----------|----------|-------------|---------------------------------------|
-| speed     | number   | 50          | 滚动速度（单位：像素/秒）             |
-| autoStart | boolean  | true        | 是否在初始化后自动开始滚动            |
-| cloneNode | boolean  | true        | 是否自动克隆节点实现无缝循环滚动      |
-| direction | string   | 'vertical'  | 滚动方向：可选 'vertical'（垂直）或 'horizontal'（水平） |
+
+| 属性      | 类型    | 默认值     | 说明                                                     |
+| --------- | ------- | ---------- | -------------------------------------------------------- |
+| speed     | number  | 50         | 滚动速度（单位：像素/秒）                                |
+| autoStart | boolean | true       | 是否在初始化后自动开始滚动                               |
+| cloneNode | boolean | true       | 是否自动克隆节点实现无缝循环滚动                         |
+| direction | string  | 'vertical' | 滚动方向：可选 'vertical'（垂直）或 'horizontal'（水平） |
 
 # 实例方法
-| 方法      | 参数     | 返回值 | 说明                                   |
-|-----------|----------|---------|---------------------------------------|
-| start()   | -        | void    | 手动启动滚动（当 autoStart=false 时使用） |
-| pause()   | -        | void    | 暂停滚动（保持当前位置）               |
-| resume()  | -        | void    | 从暂停状态恢复滚动                     |
-| stop()    | -        | void    | 完全停止并复位到起始位置               |
-| destroy() | -        | void    | 销毁实例，执行以下清理：<br>• 停止动画<br>• 移除克隆节点<br>• 断开尺寸监听<br>• 移除事件监听 |
-| use()     | Function | this    | 注册插件（支持链式调用）               |
 
-```
+| 方法      | 参数     | 返回值 | 说明                                                                                         |
+| --------- | -------- | ------ | -------------------------------------------------------------------------------------------- |
+| start()   | -        | void   | 手动启动滚动（当 autoStart=false 时使用）                                                    |
+| pause()   | -        | void   | 暂停滚动（保持当前位置）                                                                     |
+| resume()  | -        | void   | 从暂停状态恢复滚动                                                                           |
+| stop()    | -        | void   | 完全停止并复位到起始位置                                                                     |
+| destroy() | -        | void   | 销毁实例，执行以下清理：<br>• 停止动画<br>• 移除克隆节点<br>• 断开尺寸监听<br>• 移除事件监听 |
+| use()     | Function | this   | 注册插件（支持链式调用）                                                                     |
+
+````
 
 # 插件开发 ⚙️
 
@@ -122,7 +120,7 @@ import myPlugin from './myPlugin'
 new GeneralScroll('.container')
 .use(myPlugin)
 
-```
+````
 
 # 技术要求 💻
 
