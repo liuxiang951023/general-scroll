@@ -1,0 +1,31 @@
+{
+  "name": "general-scroll",
+  "version": "1.0.7",
+  "description": "一款自动滚动插件，您只需要给我个容器，我就帮你实现自动滚动。",
+  "main": "./dist/general-scroll.umd.js",
+  "scripts": {
+    "dev": "vite serve demo --port 3000",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/general-scroll.es.js",
+      "require": "./dist/general-scroll.umd.js"
+    },
+    "./plugins": {
+      "import": "./src/plugins/index.js",
+      "require": "./src/plugins/index.js"
+    }
+  },
+  "keywords": [
+    "scroll",
+    "general-scroll"
+  ],
+  "author": "芒打酱油",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.3.2"
+  }
+}
